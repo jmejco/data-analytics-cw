@@ -2,18 +2,21 @@ import folium
 import os
 import json
 from branca.element import Template, MacroElement
+import matplotlib.pyplot as plt
+
+
 
 
 # Create map object
 m = folium.Map(location=[51.522742, -0.041627], zoom_start=13, max_zoom=18, min_zoom=13) #Limiting initial, minimum and maximum zone.
 
-# Global tooltip
+# Global tooltip declarations here
 tooltip_1 = 'Click For Air Quality Info'
 
-# Geojson Data
+
 overlay = os.path.join('data', 'overlay.json')
 
-# Create markers
+# Create markers for underground stations
 folium.Marker([51.525211, -0.033503],
               popup='<strong>Mile End Station</strong>',
               tooltip=tooltip_1,
@@ -49,15 +52,17 @@ folium.Marker([51.515800, -0.014330],
               popup='<strong>Langdon Park</strong>',
               tooltip=tooltip_1).add_to(m),
 
-# Circle marker
-folium.CircleMarker(
-    location=[51.521870, -0.046230],
-    radius=100,
-    popup='Area under monitoring',
-    color='#428bca',
-    fill=True,
-    fill_color='#428bca'
-).add_to(m)
+
+folium.Circle(location = [51.525211, -0.033503],
+                    radius = 2500, popup = ' FRI ').add_to(m)
+
+# Geojson overlay
+# folium.GeoJson(overlay, name='cambridge').add_to(m)
+
+# Generate map
+m.save('map.html')
+
+#Testing commit
 
 #Adding Labels
 
@@ -162,4 +167,7 @@ m.get_root().add_child(macro)
 
 m
 #End of adding labels
+
+
+
 m.save('map.html') #Render map

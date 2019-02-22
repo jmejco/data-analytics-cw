@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.3.4/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.3.4/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>#map_1ad053db527d4f4f99d8c814eab40a7b {
+        position: relative;
+        width: 100.0%;
+        height: 100.0%;
+        left: 0.0%;
+        top: 0.0%;
+        }
+    </style>
+</head>
+<body>    
+    
+    <div class="folium-map" id="map_1ad053db527d4f4f99d8c814eab40a7b" ></div>
+    
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Draggable - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script>
+  $( function() {
+    $( "#maplegend" ).draggable({
+                    start: function (event, ui) {
+                        $(this).css({
+                            right: "auto",
+                            top: "auto",
+                            bottom: "auto"
+                        });
+                    }
+                });
+});
+
+  </script>
+</head>
+<body>
+
+ 
+<div id='maplegend' class='maplegend' 
+    style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+     border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+     
+<div class='legend-title'>Legend (draggable!)</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:red;opacity:0.7;'></span>Big</li>
+    <li><span style='background:orange;opacity:0.7;'></span>Medium</li>
+    <li><span style='background:green;opacity:0.7;'></span>Small</li>
+
+  </ul>
+</div>
+</div>
+ 
+</body>
+</html>
+
+<style type='text/css'>
+  .maplegend .legend-title {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+  .maplegend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .maplegend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+    }
+  .maplegend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 16px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    border: 1px solid #999;
+    }
+  .maplegend .legend-source {
+    font-size: 80%;
+    color: #777;
+    clear: both;
+    }
+  .maplegend a {
+    color: #777;
+    }
+</style>
+</body>
+<script>    
+    
+    
+        var bounds = null;
+    
+
+    var map_1ad053db527d4f4f99d8c814eab40a7b = L.map(
+        'map_1ad053db527d4f4f99d8c814eab40a7b', {
+        center: [51.522742, -0.041627],
+        zoom: 13,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+        });
+
+    
+    
+    var tile_layer_23fb2b7dc39141178ed593efbbe92f2f = L.tileLayer(
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {
+        "attribution": null,
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 13,
+        "noWrap": false,
+        "opacity": 1,
+        "subdomains": "abc",
+        "tms": false
+}).addTo(map_1ad053db527d4f4f99d8c814eab40a7b);
+    
+        var marker_51ff0e6e33a0431c9fe7cf4a4e682bbc = L.marker(
+            [51.525211, -0.033503],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_1ad053db527d4f4f99d8c814eab40a7b);
+        
+    
+
+                var icon_13d4cf0915d44d5392da2fafbf42d0c5 = L.AwesomeMarkers.icon({
+                    icon: 'stats',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_51ff0e6e33a0431c9fe7cf4a4e682bbc.setIcon(icon_13d4cf0915d44d5392da2fafbf42d0c5);
+            
+    
+            var popup_e28dc4192a314e59b4bf727cc2419ca9 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_7e8df1bf0b03492f880ea370bb85a322 = $(`<div id="html_7e8df1bf0b03492f880ea370bb85a322" style="width: 100.0%; height: 100.0%;"><strong>Mile End Station</strong></div>`)[0];
+                popup_e28dc4192a314e59b4bf727cc2419ca9.setContent(html_7e8df1bf0b03492f880ea370bb85a322);
+            
+
+            marker_51ff0e6e33a0431c9fe7cf4a4e682bbc.bindPopup(popup_e28dc4192a314e59b4bf727cc2419ca9)
+            ;
+
+            
+        
+    
+        marker_51ff0e6e33a0431c9fe7cf4a4e682bbc.bindTooltip(
+            `<div>`
+            + `Click For Air Quality Info` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_69f4fa8104dd48d3b8bdb9384fdaa5bf = L.marker(
+            [51.527847, -0.055468],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_1ad053db527d4f4f99d8c814eab40a7b);
+        
+    
+
+                var icon_4730a74d138c4c2d8ab30ee894adac74 = L.AwesomeMarkers.icon({
+                    icon: 'cloud',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_69f4fa8104dd48d3b8bdb9384fdaa5bf.setIcon(icon_4730a74d138c4c2d8ab30ee894adac74);
+            
+    
+            var popup_f1fd4237113346a2aa102c1d275361d2 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_017c5a22c8474fe1a4dea51fc25124b5 = $(`<div id="html_017c5a22c8474fe1a4dea51fc25124b5" style="width: 100.0%; height: 100.0%;"><strong>Bethnel Green Station</strong></div>`)[0];
+                popup_f1fd4237113346a2aa102c1d275361d2.setContent(html_017c5a22c8474fe1a4dea51fc25124b5);
+            
+
+            marker_69f4fa8104dd48d3b8bdb9384fdaa5bf.bindPopup(popup_f1fd4237113346a2aa102c1d275361d2)
+            ;
+
+            
+        
+    
+        marker_69f4fa8104dd48d3b8bdb9384fdaa5bf.bindTooltip(
+            `<div>`
+            + `Click For Air Quality Info` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_b4ec7e8a67424536b7e08aba6259c05c = L.marker(
+            [51.521739, -0.046636],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_1ad053db527d4f4f99d8c814eab40a7b);
+        
+    
+
+                var icon_9c4378037e06432b953626462422ac90 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'purple',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b4ec7e8a67424536b7e08aba6259c05c.setIcon(icon_9c4378037e06432b953626462422ac90);
+            
+    
+            var popup_23f351ebe1e74445af8d1319318244ae = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_3ffe8a11c6e54c30bc3f6f5a98d8641c = $(`<div id="html_3ffe8a11c6e54c30bc3f6f5a98d8641c" style="width: 100.0%; height: 100.0%;"><strong>Stepney Green Station</strong></div>`)[0];
+                popup_23f351ebe1e74445af8d1319318244ae.setContent(html_3ffe8a11c6e54c30bc3f6f5a98d8641c);
+            
+
+            marker_b4ec7e8a67424536b7e08aba6259c05c.bindPopup(popup_23f351ebe1e74445af8d1319318244ae)
+            ;
+
+            
+        
+    
+        marker_b4ec7e8a67424536b7e08aba6259c05c.bindTooltip(
+            `<div>`
+            + `Click For Air Quality Info` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_84610c14992245cfa085733f7897349c = L.marker(
+            [51.519531, -0.061234],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_1ad053db527d4f4f99d8c814eab40a7b);
+        
+    
+
+                var icon_f0e0de3fba2a4ad0b15b0a8edd686928 = L.AwesomeMarkers.icon({
+                    icon: 'leaf',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_84610c14992245cfa085733f7897349c.setIcon(icon_f0e0de3fba2a4ad0b15b0a8edd686928);
+            
+    
+            var popup_04d4476fb32847b184245ef3658c1628 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_cb8240f3d6334774b4d0d97bbf10da02 = $(`<div id="html_cb8240f3d6334774b4d0d97bbf10da02" style="width: 100.0%; height: 100.0%;"><strong>Whitechapel Station</strong></div>`)[0];
+                popup_04d4476fb32847b184245ef3658c1628.setContent(html_cb8240f3d6334774b4d0d97bbf10da02);
+            
+
+            marker_84610c14992245cfa085733f7897349c.bindPopup(popup_04d4476fb32847b184245ef3658c1628)
+            ;
+
+            
+        
+    
+        marker_84610c14992245cfa085733f7897349c.bindTooltip(
+            `<div>`
+            + `Click For Air Quality Info` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_d579da106d934ce1b2b93fdf6ad62f65 = L.marker(
+            [51.527002, -0.024764],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_1ad053db527d4f4f99d8c814eab40a7b);
+        
+    
+            var popup_9fe24cd6fbe743fa90bced53b688d21c = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_cdb8c1a0cd8043c8b133858e57118955 = $(`<div id="html_cdb8c1a0cd8043c8b133858e57118955" style="width: 100.0%; height: 100.0%;"><strong>Bow Road</strong></div>`)[0];
+                popup_9fe24cd6fbe743fa90bced53b688d21c.setContent(html_cdb8c1a0cd8043c8b133858e57118955);
+            
+
+            marker_d579da106d934ce1b2b93fdf6ad62f65.bindPopup(popup_9fe24cd6fbe743fa90bced53b688d21c)
+            ;
+
+            
+        
+    
+        marker_d579da106d934ce1b2b93fdf6ad62f65.bindTooltip(
+            `<div>`
+            + `Click For Air Quality Info` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_b5efd070a5df4b158cda1546ca0b5060 = L.marker(
+            [51.52246, -0.01747],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_1ad053db527d4f4f99d8c814eab40a7b);
+        
+    
+            var popup_33e42e9485a84024bacd4e8a007dfa1c = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_0e416d58a4064db08408274d4bade030 = $(`<div id="html_0e416d58a4064db08408274d4bade030" style="width: 100.0%; height: 100.0%;"><strong>Devons Road</strong></div>`)[0];
+                popup_33e42e9485a84024bacd4e8a007dfa1c.setContent(html_0e416d58a4064db08408274d4bade030);
+            
+
+            marker_b5efd070a5df4b158cda1546ca0b5060.bindPopup(popup_33e42e9485a84024bacd4e8a007dfa1c)
+            ;
+
+            
+        
+    
+        marker_b5efd070a5df4b158cda1546ca0b5060.bindTooltip(
+            `<div>`
+            + `Click For Air Quality Info` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_76a71c56a8944400b845753dfeeab02a = L.marker(
+            [51.51174, -0.05586],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_1ad053db527d4f4f99d8c814eab40a7b);
+        
+    
+            var popup_f66334784ada4d6aa24af8fbaa41280c = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_c4eded0a81944dfdb9fe74c12fe7c329 = $(`<div id="html_c4eded0a81944dfdb9fe74c12fe7c329" style="width: 100.0%; height: 100.0%;"><strong>Shadwell</strong></div>`)[0];
+                popup_f66334784ada4d6aa24af8fbaa41280c.setContent(html_c4eded0a81944dfdb9fe74c12fe7c329);
+            
+
+            marker_76a71c56a8944400b845753dfeeab02a.bindPopup(popup_f66334784ada4d6aa24af8fbaa41280c)
+            ;
+
+            
+        
+    
+        marker_76a71c56a8944400b845753dfeeab02a.bindTooltip(
+            `<div>`
+            + `Click For Air Quality Info` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_eef40a0eae92427ab1fbdc912b0ac17f = L.marker(
+            [51.51235, -0.039466],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_1ad053db527d4f4f99d8c814eab40a7b);
+        
+    
+            var popup_4d07c4a898e74952a5f690e90947bbb4 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_111b9233846c4adb8d6fb0727b180bc8 = $(`<div id="html_111b9233846c4adb8d6fb0727b180bc8" style="width: 100.0%; height: 100.0%;"><strong>LimeHouse</strong></div>`)[0];
+                popup_4d07c4a898e74952a5f690e90947bbb4.setContent(html_111b9233846c4adb8d6fb0727b180bc8);
+            
+
+            marker_eef40a0eae92427ab1fbdc912b0ac17f.bindPopup(popup_4d07c4a898e74952a5f690e90947bbb4)
+            ;
+
+            
+        
+    
+        marker_eef40a0eae92427ab1fbdc912b0ac17f.bindTooltip(
+            `<div>`
+            + `Click For Air Quality Info` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_dec0f8b316f9450c9bd2b989d4c989b4 = L.marker(
+            [51.507538, -0.012823],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_1ad053db527d4f4f99d8c814eab40a7b);
+        
+    
+            var popup_e818b4e7ca6847428ab9c441ce95039d = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_acee560f9e9941509c83e791ecdeed34 = $(`<div id="html_acee560f9e9941509c83e791ecdeed34" style="width: 100.0%; height: 100.0%;"><strong>Blackwall DLR</strong></div>`)[0];
+                popup_e818b4e7ca6847428ab9c441ce95039d.setContent(html_acee560f9e9941509c83e791ecdeed34);
+            
+
+            marker_dec0f8b316f9450c9bd2b989d4c989b4.bindPopup(popup_e818b4e7ca6847428ab9c441ce95039d)
+            ;
+
+            
+        
+    
+        marker_dec0f8b316f9450c9bd2b989d4c989b4.bindTooltip(
+            `<div>`
+            + `Click For Air Quality Info` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_21585c928613473aa963e8ba4e5015cd = L.marker(
+            [51.5158, -0.01433],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_1ad053db527d4f4f99d8c814eab40a7b);
+        
+    
+            var popup_9a312462bffd4859badd3d831c93bd3c = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_2d03039708584e7d905d677439279298 = $(`<div id="html_2d03039708584e7d905d677439279298" style="width: 100.0%; height: 100.0%;"><strong>Langdon Park</strong></div>`)[0];
+                popup_9a312462bffd4859badd3d831c93bd3c.setContent(html_2d03039708584e7d905d677439279298);
+            
+
+            marker_21585c928613473aa963e8ba4e5015cd.bindPopup(popup_9a312462bffd4859badd3d831c93bd3c)
+            ;
+
+            
+        
+    
+        marker_21585c928613473aa963e8ba4e5015cd.bindTooltip(
+            `<div>`
+            + `Click For Air Quality Info` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+            var circle_marker_df5e02bf8e8047c489534089d95dbe9d = L.circleMarker(
+                [51.52187, -0.04623],
+                {
+  "bubblingMouseEvents": true,
+  "color": "#428bca",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#428bca",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 100,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_1ad053db527d4f4f99d8c814eab40a7b);
+            
+    
+            var popup_ab8b5d34d8464a8fb764099d094c71cc = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_aa0b1ba84cde4999a4877877915c1b8d = $(`<div id="html_aa0b1ba84cde4999a4877877915c1b8d" style="width: 100.0%; height: 100.0%;">Area under monitoring</div>`)[0];
+                popup_ab8b5d34d8464a8fb764099d094c71cc.setContent(html_aa0b1ba84cde4999a4877877915c1b8d);
+            
+
+            circle_marker_df5e02bf8e8047c489534089d95dbe9d.bindPopup(popup_ab8b5d34d8464a8fb764099d094c71cc)
+            ;
+
+            
+        
+</script>

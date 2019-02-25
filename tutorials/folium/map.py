@@ -1,3 +1,4 @@
+###-Libraries for map
 import folium
 import os
 import json
@@ -5,12 +6,17 @@ from branca.element import Template, MacroElement
 import matplotlib.pyplot as plt
 from folium.plugins import MiniMap
 
+###-Neural networks & LSTM
+import pandas as pd
+import numpy as np
+import seaborn as sns
+from folium.plugins import TimestampedGeoJson
 
 
 
 
-# Create map object
-m = folium.Map(location=[51.522742, -0.041627], zoom_start=13, max_zoom=18, min_zoom=13) #Limiting initial, minimum and maximum zone.
+# Create map object #Limiting initial, minimum and maximum zone.
+m = folium.Map(location=[51.522742, -0.041627], zoom_start=13, max_zoom=18, min_zoom=13) 
 
 # Global tooltip declarations here
 tooltip_1 = 'Click For Air Quality Info'
@@ -18,8 +24,6 @@ tooltip_1 = 'Click For Air Quality Info'
 # Object mini map on top right
 minimap = MiniMap(toggle_display=True, position='topright')
 minimap.add_to(m)
-
-
 
 overlay = os.path.join('data', 'overlay.json')
 
@@ -58,24 +62,20 @@ folium.Marker([51.507538, -0.012823],
 folium.Marker([51.515800, -0.014330],
               popup='<strong>Langdon Park</strong>',
               tooltip=tooltip_1).add_to(m),
-folium.Marker([51.507538, -0.012823],
+folium.Marker([51.507538, -0.012823], #Requires correction
               popup='<strong>Poplar DLR</strong>',
-              icon=folium.Icon(color='red',icon='bus'),
+              icon=folium.Icon(color='green',icon='bus'),
               tooltip=tooltip_1).add_to(m),
 
-
+#Area under study
 folium.Circle(location = [51.525211, -0.033503],
                     radius = 2500, popup = ' FRI ').add_to(m)
 
-# Geojson overlay
-# folium.GeoJson(overlay, name='cambridge').add_to(m)
 
 # Generate map
 m.save('map.html')
 
-#Testing commit
-
-#Adding Labels
+#Adding Legend
 
 
 template = """
@@ -177,8 +177,10 @@ macro._template = Template(template)
 m.get_root().add_child(macro)
 
 m
-#End of adding labels
+#End of adding legend
 
 
 
 m.save('map.html') #Render map
+
+

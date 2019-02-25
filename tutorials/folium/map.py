@@ -3,6 +3,8 @@ import os
 import json
 from branca.element import Template, MacroElement
 import matplotlib.pyplot as plt
+from folium.plugins import MiniMap
+
 
 
 
@@ -12,6 +14,11 @@ m = folium.Map(location=[51.522742, -0.041627], zoom_start=13, max_zoom=18, min_
 
 # Global tooltip declarations here
 tooltip_1 = 'Click For Air Quality Info'
+
+# Object mini map on top right
+minimap = MiniMap(toggle_display=True, position='topright')
+minimap.add_to(m)
+
 
 
 overlay = os.path.join('data', 'overlay.json')
@@ -50,6 +57,10 @@ folium.Marker([51.507538, -0.012823],
               tooltip=tooltip_1).add_to(m),
 folium.Marker([51.515800, -0.014330],
               popup='<strong>Langdon Park</strong>',
+              tooltip=tooltip_1).add_to(m),
+folium.Marker([51.507538, -0.012823],
+              popup='<strong>Poplar DLR</strong>',
+              icon=folium.Icon(color='red',icon='bus'),
               tooltip=tooltip_1).add_to(m),
 
 

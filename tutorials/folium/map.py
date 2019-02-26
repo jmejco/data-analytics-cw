@@ -16,7 +16,7 @@ from folium.plugins import TimestampedGeoJson
 
 
 # Create map object #Limiting initial, minimum and maximum zone.
-m = folium.Map(location=[51.522742, -0.041627], zoom_start=13, max_zoom=18, min_zoom=13) 
+m = folium.Map(location=[51.522742, -0.041627], zoom_start=13, max_zoom=18, min_zoom=13, control_scale = True) 
 
 # Global tooltip declarations here
 tooltip_1 = 'Click For Air Quality Info'

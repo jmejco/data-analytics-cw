@@ -2,10 +2,16 @@
 import folium
 import os
 import json
+import vincent
 from branca.element import Template, MacroElement
 import matplotlib.pyplot as plt
 from folium.plugins import MiniMap
-
+import pandas as pd
+import numpy as np
+import time
+import os
+import json
+import sys
 ###-Neural networks & LSTM
 import pandas as pd
 import numpy as np
@@ -179,8 +185,26 @@ m.get_root().add_child(macro)
 m
 #End of adding legend
 
+#Adding graph
+
+#Graph feature
+df = pd.read_csv("sample1.csv")
+print(df.to_string())
+# Let's create the vincent chart.
+scatter_chart = vincent.Bar(df[['Concentration']],width=600,height=300).axis_titles(x='Days', y='Concentrations')
+# Let's convert it to JSON.
+scatter_json = scatter_chart.to_json()
+# Let's convert it to dict.
+scatter_dict = json.loads(scatter_json)
+# m = folium.Map([43, -100], zoom_start=4)
+# Let's create a Vega popup based on df.
+popup = folium.Popup(max_width=650)
+folium.Vega(scatter_json, height=350, width=650).add_to(popup)
+folium.Marker([51.525211, -0.033503], popup=popup).add_to(m)
+#Graph feature ends
+
 
 
 m.save('map.html') #Render map
-
+print 'Map rendering completed'
 

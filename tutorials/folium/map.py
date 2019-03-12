@@ -17,12 +17,27 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 from folium.plugins import TimestampedGeoJson
+from folium_jsbutton import JsButton
 
 
 
 
 # Create map object #Limiting initial, minimum and maximum zone.
 m = folium.Map(location=[51.522742, -0.041627], zoom_start=13, max_zoom=18, min_zoom=13, control_scale = True) 
+
+JsButton(
+    title='<i class="fa fa-home"></i>',function="""
+    function() {
+        window.location.href = "index.html"
+    }
+    """).add_to(m)
+
+JsButton(
+    title='<i class="fas fa-arrow-circle-left"></i>',function="""
+    function() {
+        window.location.href = "p_map.html"
+    }
+    """).add_to(m)
 
 # Global tooltip declarations here
 tooltip_1 = 'Click For Air Quality Info'

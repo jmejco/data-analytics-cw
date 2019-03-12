@@ -17,7 +17,7 @@
     
     <meta name="viewport" content="width=device-width,
         initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <style>#map_31f84b46c8454eee842efddf529cc598 {
+    <style>#map_0c606cc3869c44ef9f075e5cc891252b {
         position: relative;
         width: 100.0%;
         height: 100.0%;
@@ -25,12 +25,15 @@
         top: 0.0%;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
     
-            <style> #vega_749d0839e3a6463fb031b747659510d0 {
+            <style> #vega_a366461e4c704bc797f53592c92c5931 {
                 position : relative;
                 width : 650.0px;
                 height: 350.0px;
@@ -43,7 +46,7 @@
 </head>
 <body>    
     
-    <div class="folium-map" id="map_31f84b46c8454eee842efddf529cc598" ></div>
+    <div class="folium-map" id="map_0c606cc3869c44ef9f075e5cc891252b" ></div>
 </body>
 <script>    
     
@@ -51,8 +54,8 @@
         var bounds = null;
     
 
-    var map_31f84b46c8454eee842efddf529cc598 = L.map(
-        'map_31f84b46c8454eee842efddf529cc598', {
+    var map_0c606cc3869c44ef9f075e5cc891252b = L.map(
+        'map_0c606cc3869c44ef9f075e5cc891252b', {
         center: [51.522742, -0.041627],
         zoom: 13,
         maxBounds: bounds,
@@ -61,10 +64,10 @@
         crs: L.CRS.EPSG3857,
         zoomControl: true,
         });
-L.control.scale().addTo(map_31f84b46c8454eee842efddf529cc598);
+L.control.scale().addTo(map_0c606cc3869c44ef9f075e5cc891252b);
     
     
-    var tile_layer_45969771ba0b46d6bc1f169228031643 = L.tileLayer(
+    var tile_layer_c173e39e023444cabc268da08ba5036b = L.tileLayer(
         'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
         {
         "attribution": null,
@@ -76,10 +79,30 @@ L.control.scale().addTo(map_31f84b46c8454eee842efddf529cc598);
         "opacity": 1,
         "subdomains": "abc",
         "tms": false
-}).addTo(map_31f84b46c8454eee842efddf529cc598);
+}).addTo(map_0c606cc3869c44ef9f075e5cc891252b);
+    
+        L.easyButton(
+            '<span><i class="fa fa-home"></i></span>',
+            
+    function() {
+        window.location.href = "index.html"
+    }
+    
+        ).addTo(map_0c606cc3869c44ef9f075e5cc891252b);
+        
+    
+        L.easyButton(
+            '<span><i class="fas fa-arrow-circle-left"></i></span>',
+            
+    function() {
+        window.location.href = "p_map.html"
+    }
+    
+        ).addTo(map_0c606cc3869c44ef9f075e5cc891252b);
+        
     
 
-        var tile_layer_19c38441b13b45a284ea9e410e148881 = L.tileLayer(
+        var tile_layer_811e1f0d24e148cd96e84b1e520e54f0 = L.tileLayer(
         'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
         {
         "attribution": null,
@@ -93,7 +116,7 @@ L.control.scale().addTo(map_31f84b46c8454eee842efddf529cc598);
         "tms": false
 } );
 
-        var mini_map_8c2417618f554f9194fb25f97516afc2 = new L.Control.MiniMap( tile_layer_19c38441b13b45a284ea9e410e148881,
+        var mini_map_11299a3ecc0440c880dcc38634e6ac21 = new L.Control.MiniMap( tile_layer_811e1f0d24e148cd96e84b1e520e54f0,
          {
   "autoToggleDisplay": false,
   "centerFixed": false,
@@ -108,389 +131,389 @@ L.control.scale().addTo(map_31f84b46c8454eee842efddf529cc598);
   "zoomLevelFixed": null,
   "zoomLevelOffset": -5
 });
-        map_31f84b46c8454eee842efddf529cc598.addControl(mini_map_8c2417618f554f9194fb25f97516afc2);
+        map_0c606cc3869c44ef9f075e5cc891252b.addControl(mini_map_11299a3ecc0440c880dcc38634e6ac21);
 
         
     
-        var marker_70a094bdbf104906bd9760a49481d129 = L.marker(
+        var marker_1c3a246c24bb46c1998fa17f525a3cbc = L.marker(
             [51.525211, -0.033503],
             {
                 icon: new L.Icon.Default()
                 }
-            ).addTo(map_31f84b46c8454eee842efddf529cc598);
+            ).addTo(map_0c606cc3869c44ef9f075e5cc891252b);
         
     
 
-                var icon_ee36e184a9d2438b9d0b537fc3515463 = L.AwesomeMarkers.icon({
+                var icon_54eb383b1b6e465cae8d6c63b10d09aa = L.AwesomeMarkers.icon({
                     icon: 'stats',
                     iconColor: 'white',
                     markerColor: 'blue',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_70a094bdbf104906bd9760a49481d129.setIcon(icon_ee36e184a9d2438b9d0b537fc3515463);
+                marker_1c3a246c24bb46c1998fa17f525a3cbc.setIcon(icon_54eb383b1b6e465cae8d6c63b10d09aa);
             
     
-            var popup_5c1787a7a55b4f4caa2ffe070a0f83e9 = L.popup({maxWidth: '300'
+            var popup_5f21eaa089df4484b51d855c49c0f189 = L.popup({maxWidth: '300'
             
             });
 
             
-                var html_b3dede6fd1f94141870b4e3ddd714b3d = $(`<div id="html_b3dede6fd1f94141870b4e3ddd714b3d" style="width: 100.0%; height: 100.0%;"><strong>Mile End Station</strong></div>`)[0];
-                popup_5c1787a7a55b4f4caa2ffe070a0f83e9.setContent(html_b3dede6fd1f94141870b4e3ddd714b3d);
+                var html_b5c07d016ac846db813f4ff5ffe164df = $(`<div id="html_b5c07d016ac846db813f4ff5ffe164df" style="width: 100.0%; height: 100.0%;"><strong>Mile End Station</strong></div>`)[0];
+                popup_5f21eaa089df4484b51d855c49c0f189.setContent(html_b5c07d016ac846db813f4ff5ffe164df);
             
 
-            marker_70a094bdbf104906bd9760a49481d129.bindPopup(popup_5c1787a7a55b4f4caa2ffe070a0f83e9)
+            marker_1c3a246c24bb46c1998fa17f525a3cbc.bindPopup(popup_5f21eaa089df4484b51d855c49c0f189)
             ;
 
             
         
     
-        marker_70a094bdbf104906bd9760a49481d129.bindTooltip(
+        marker_1c3a246c24bb46c1998fa17f525a3cbc.bindTooltip(
             `<div>`
             + `Click For Air Quality Info` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_3b3178a5814241489b1ba1c4979a5598 = L.marker(
+        var marker_bbbd624f59bb4d90882a1035277136d0 = L.marker(
             [51.527847, -0.055468],
             {
                 icon: new L.Icon.Default()
                 }
-            ).addTo(map_31f84b46c8454eee842efddf529cc598);
+            ).addTo(map_0c606cc3869c44ef9f075e5cc891252b);
         
     
 
-                var icon_7cf4e2d551d741409932748ef42b7b4a = L.AwesomeMarkers.icon({
+                var icon_4a6297e124ac40058f9f2e0904093d47 = L.AwesomeMarkers.icon({
                     icon: 'cloud',
                     iconColor: 'white',
                     markerColor: 'blue',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_3b3178a5814241489b1ba1c4979a5598.setIcon(icon_7cf4e2d551d741409932748ef42b7b4a);
+                marker_bbbd624f59bb4d90882a1035277136d0.setIcon(icon_4a6297e124ac40058f9f2e0904093d47);
             
     
-            var popup_d4d918fccdc24259bf248a46a99e99e4 = L.popup({maxWidth: '300'
+            var popup_61476ff4baf0459193e8b7bd4072227b = L.popup({maxWidth: '300'
             
             });
 
             
-                var html_0a14da5182cf4e5a96454b19ad4b5bfa = $(`<div id="html_0a14da5182cf4e5a96454b19ad4b5bfa" style="width: 100.0%; height: 100.0%;"><strong>Bethnel Green Station</strong></div>`)[0];
-                popup_d4d918fccdc24259bf248a46a99e99e4.setContent(html_0a14da5182cf4e5a96454b19ad4b5bfa);
+                var html_dc334939a4af46209dd79aa577fb0768 = $(`<div id="html_dc334939a4af46209dd79aa577fb0768" style="width: 100.0%; height: 100.0%;"><strong>Bethnel Green Station</strong></div>`)[0];
+                popup_61476ff4baf0459193e8b7bd4072227b.setContent(html_dc334939a4af46209dd79aa577fb0768);
             
 
-            marker_3b3178a5814241489b1ba1c4979a5598.bindPopup(popup_d4d918fccdc24259bf248a46a99e99e4)
+            marker_bbbd624f59bb4d90882a1035277136d0.bindPopup(popup_61476ff4baf0459193e8b7bd4072227b)
             ;
 
             
         
     
-        marker_3b3178a5814241489b1ba1c4979a5598.bindTooltip(
+        marker_bbbd624f59bb4d90882a1035277136d0.bindTooltip(
             `<div>`
             + `Click For Air Quality Info` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_42c1127add7543ee8613d984358d6011 = L.marker(
+        var marker_494d611589dd4e9cace8b3b74dfa70b8 = L.marker(
             [51.521739, -0.046636],
             {
                 icon: new L.Icon.Default()
                 }
-            ).addTo(map_31f84b46c8454eee842efddf529cc598);
+            ).addTo(map_0c606cc3869c44ef9f075e5cc891252b);
         
     
 
-                var icon_cf7fc09a12e84b94b244eaff930a6ce1 = L.AwesomeMarkers.icon({
+                var icon_bd5f1cd5964f4edebbf740ce6a7b0437 = L.AwesomeMarkers.icon({
                     icon: 'info-sign',
                     iconColor: 'white',
                     markerColor: 'purple',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_42c1127add7543ee8613d984358d6011.setIcon(icon_cf7fc09a12e84b94b244eaff930a6ce1);
+                marker_494d611589dd4e9cace8b3b74dfa70b8.setIcon(icon_bd5f1cd5964f4edebbf740ce6a7b0437);
             
     
-            var popup_4d7901129a6443f9b3b7704a99a16f32 = L.popup({maxWidth: '300'
+            var popup_611c574f565c4156be8b61582f5da53c = L.popup({maxWidth: '300'
             
             });
 
             
-                var html_83c5c4e6e910495a9f4951edc59892ee = $(`<div id="html_83c5c4e6e910495a9f4951edc59892ee" style="width: 100.0%; height: 100.0%;"><strong>Stepney Green Station</strong></div>`)[0];
-                popup_4d7901129a6443f9b3b7704a99a16f32.setContent(html_83c5c4e6e910495a9f4951edc59892ee);
+                var html_e8d0584bada346c5b87d24418be4333d = $(`<div id="html_e8d0584bada346c5b87d24418be4333d" style="width: 100.0%; height: 100.0%;"><strong>Stepney Green Station</strong></div>`)[0];
+                popup_611c574f565c4156be8b61582f5da53c.setContent(html_e8d0584bada346c5b87d24418be4333d);
             
 
-            marker_42c1127add7543ee8613d984358d6011.bindPopup(popup_4d7901129a6443f9b3b7704a99a16f32)
+            marker_494d611589dd4e9cace8b3b74dfa70b8.bindPopup(popup_611c574f565c4156be8b61582f5da53c)
             ;
 
             
         
     
-        marker_42c1127add7543ee8613d984358d6011.bindTooltip(
+        marker_494d611589dd4e9cace8b3b74dfa70b8.bindTooltip(
             `<div>`
             + `Click For Air Quality Info` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_e627c6da8c63404fb86090ca739657ae = L.marker(
+        var marker_a92248f809f343bc93c82be7d782bbeb = L.marker(
             [51.519531, -0.061234],
             {
                 icon: new L.Icon.Default()
                 }
-            ).addTo(map_31f84b46c8454eee842efddf529cc598);
+            ).addTo(map_0c606cc3869c44ef9f075e5cc891252b);
         
     
 
-                var icon_4630f5d4304a48aa893395947fe5026c = L.AwesomeMarkers.icon({
+                var icon_813596f40d854e068647b4708650f4ac = L.AwesomeMarkers.icon({
                     icon: 'leaf',
                     iconColor: 'white',
                     markerColor: 'green',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_e627c6da8c63404fb86090ca739657ae.setIcon(icon_4630f5d4304a48aa893395947fe5026c);
+                marker_a92248f809f343bc93c82be7d782bbeb.setIcon(icon_813596f40d854e068647b4708650f4ac);
             
     
-            var popup_dba157827c1b400f94c5426bb4170a2a = L.popup({maxWidth: '300'
+            var popup_adf500e984a3479695c040e245f6c094 = L.popup({maxWidth: '300'
             
             });
 
             
-                var html_ea6f55bc9cdb43a5a1f78faa95ae552a = $(`<div id="html_ea6f55bc9cdb43a5a1f78faa95ae552a" style="width: 100.0%; height: 100.0%;"><strong>Whitechapel Station</strong></div>`)[0];
-                popup_dba157827c1b400f94c5426bb4170a2a.setContent(html_ea6f55bc9cdb43a5a1f78faa95ae552a);
+                var html_744f21d4517148babd16c7d0cc1ae8c5 = $(`<div id="html_744f21d4517148babd16c7d0cc1ae8c5" style="width: 100.0%; height: 100.0%;"><strong>Whitechapel Station</strong></div>`)[0];
+                popup_adf500e984a3479695c040e245f6c094.setContent(html_744f21d4517148babd16c7d0cc1ae8c5);
             
 
-            marker_e627c6da8c63404fb86090ca739657ae.bindPopup(popup_dba157827c1b400f94c5426bb4170a2a)
+            marker_a92248f809f343bc93c82be7d782bbeb.bindPopup(popup_adf500e984a3479695c040e245f6c094)
             ;
 
             
         
     
-        marker_e627c6da8c63404fb86090ca739657ae.bindTooltip(
+        marker_a92248f809f343bc93c82be7d782bbeb.bindTooltip(
             `<div>`
             + `Click For Air Quality Info` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_b3c955aea6a44a35b1f366885c9c4e9b = L.marker(
+        var marker_a336c2cb984249049b82f65c93b05daf = L.marker(
             [51.527002, -0.024764],
             {
                 icon: new L.Icon.Default()
                 }
-            ).addTo(map_31f84b46c8454eee842efddf529cc598);
+            ).addTo(map_0c606cc3869c44ef9f075e5cc891252b);
         
     
-            var popup_c57f55e46f314b7e87a0bc32bbf33552 = L.popup({maxWidth: '300'
+            var popup_41287ab842e344929d96cff489c23889 = L.popup({maxWidth: '300'
             
             });
 
             
-                var html_1d1c2026cc91425d9f676dfb3933550d = $(`<div id="html_1d1c2026cc91425d9f676dfb3933550d" style="width: 100.0%; height: 100.0%;"><strong>Bow Road</strong></div>`)[0];
-                popup_c57f55e46f314b7e87a0bc32bbf33552.setContent(html_1d1c2026cc91425d9f676dfb3933550d);
+                var html_3533d05ff39344c18ff02798bef06f2e = $(`<div id="html_3533d05ff39344c18ff02798bef06f2e" style="width: 100.0%; height: 100.0%;"><strong>Bow Road</strong></div>`)[0];
+                popup_41287ab842e344929d96cff489c23889.setContent(html_3533d05ff39344c18ff02798bef06f2e);
             
 
-            marker_b3c955aea6a44a35b1f366885c9c4e9b.bindPopup(popup_c57f55e46f314b7e87a0bc32bbf33552)
+            marker_a336c2cb984249049b82f65c93b05daf.bindPopup(popup_41287ab842e344929d96cff489c23889)
             ;
 
             
         
     
-        marker_b3c955aea6a44a35b1f366885c9c4e9b.bindTooltip(
+        marker_a336c2cb984249049b82f65c93b05daf.bindTooltip(
             `<div>`
             + `Click For Air Quality Info` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_96e3e7d7ac8147bfb5b6bbdf5a3d3ff7 = L.marker(
+        var marker_e309d1d73cb7417e87cc5dd03caa6133 = L.marker(
             [51.52246, -0.01747],
             {
                 icon: new L.Icon.Default()
                 }
-            ).addTo(map_31f84b46c8454eee842efddf529cc598);
+            ).addTo(map_0c606cc3869c44ef9f075e5cc891252b);
         
     
-            var popup_759f00a199a948b88a03776772130c28 = L.popup({maxWidth: '300'
+            var popup_ff4dc7e20c8241bab2d3e409fdf520d0 = L.popup({maxWidth: '300'
             
             });
 
             
-                var html_73054b5122784a2689b44195c9fe2604 = $(`<div id="html_73054b5122784a2689b44195c9fe2604" style="width: 100.0%; height: 100.0%;"><strong>Devons Road</strong></div>`)[0];
-                popup_759f00a199a948b88a03776772130c28.setContent(html_73054b5122784a2689b44195c9fe2604);
+                var html_870cf14cc800419cb11682100ea52e8d = $(`<div id="html_870cf14cc800419cb11682100ea52e8d" style="width: 100.0%; height: 100.0%;"><strong>Devons Road</strong></div>`)[0];
+                popup_ff4dc7e20c8241bab2d3e409fdf520d0.setContent(html_870cf14cc800419cb11682100ea52e8d);
             
 
-            marker_96e3e7d7ac8147bfb5b6bbdf5a3d3ff7.bindPopup(popup_759f00a199a948b88a03776772130c28)
+            marker_e309d1d73cb7417e87cc5dd03caa6133.bindPopup(popup_ff4dc7e20c8241bab2d3e409fdf520d0)
             ;
 
             
         
     
-        marker_96e3e7d7ac8147bfb5b6bbdf5a3d3ff7.bindTooltip(
+        marker_e309d1d73cb7417e87cc5dd03caa6133.bindTooltip(
             `<div>`
             + `Click For Air Quality Info` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_a23aa694c50e4ade8563e861f044474b = L.marker(
+        var marker_538ec9d16996410db7fc5fe55c049a1a = L.marker(
             [51.51174, -0.05586],
             {
                 icon: new L.Icon.Default()
                 }
-            ).addTo(map_31f84b46c8454eee842efddf529cc598);
+            ).addTo(map_0c606cc3869c44ef9f075e5cc891252b);
         
     
-            var popup_d209341758c04335a51bd45ff234534b = L.popup({maxWidth: '300'
+            var popup_9934e84652b64390b5c011e62e5cb36d = L.popup({maxWidth: '300'
             
             });
 
             
-                var html_6629df6c5d3a4eb59b978d97974397e1 = $(`<div id="html_6629df6c5d3a4eb59b978d97974397e1" style="width: 100.0%; height: 100.0%;"><strong>Shadwell</strong></div>`)[0];
-                popup_d209341758c04335a51bd45ff234534b.setContent(html_6629df6c5d3a4eb59b978d97974397e1);
+                var html_6949fc72d27c4f839d4b24180eaded12 = $(`<div id="html_6949fc72d27c4f839d4b24180eaded12" style="width: 100.0%; height: 100.0%;"><strong>Shadwell</strong></div>`)[0];
+                popup_9934e84652b64390b5c011e62e5cb36d.setContent(html_6949fc72d27c4f839d4b24180eaded12);
             
 
-            marker_a23aa694c50e4ade8563e861f044474b.bindPopup(popup_d209341758c04335a51bd45ff234534b)
+            marker_538ec9d16996410db7fc5fe55c049a1a.bindPopup(popup_9934e84652b64390b5c011e62e5cb36d)
             ;
 
             
         
     
-        marker_a23aa694c50e4ade8563e861f044474b.bindTooltip(
+        marker_538ec9d16996410db7fc5fe55c049a1a.bindTooltip(
             `<div>`
             + `Click For Air Quality Info` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_5a74f7f0671f44eebe07f45eefde5578 = L.marker(
+        var marker_12c06447382c4a32a030f68c5b25208c = L.marker(
             [51.51235, -0.039466],
             {
                 icon: new L.Icon.Default()
                 }
-            ).addTo(map_31f84b46c8454eee842efddf529cc598);
+            ).addTo(map_0c606cc3869c44ef9f075e5cc891252b);
         
     
-            var popup_73372ec958d241089bc86d816561a175 = L.popup({maxWidth: '300'
+            var popup_db424953439348ab94288799a611dda5 = L.popup({maxWidth: '300'
             
             });
 
             
-                var html_8cd78ff3d8be4961893cb27b99b12c7b = $(`<div id="html_8cd78ff3d8be4961893cb27b99b12c7b" style="width: 100.0%; height: 100.0%;"><strong>LimeHouse</strong></div>`)[0];
-                popup_73372ec958d241089bc86d816561a175.setContent(html_8cd78ff3d8be4961893cb27b99b12c7b);
+                var html_93ba9e652c1643d5b3b4a5aea6f0d1bc = $(`<div id="html_93ba9e652c1643d5b3b4a5aea6f0d1bc" style="width: 100.0%; height: 100.0%;"><strong>LimeHouse</strong></div>`)[0];
+                popup_db424953439348ab94288799a611dda5.setContent(html_93ba9e652c1643d5b3b4a5aea6f0d1bc);
             
 
-            marker_5a74f7f0671f44eebe07f45eefde5578.bindPopup(popup_73372ec958d241089bc86d816561a175)
+            marker_12c06447382c4a32a030f68c5b25208c.bindPopup(popup_db424953439348ab94288799a611dda5)
             ;
 
             
         
     
-        marker_5a74f7f0671f44eebe07f45eefde5578.bindTooltip(
+        marker_12c06447382c4a32a030f68c5b25208c.bindTooltip(
             `<div>`
             + `Click For Air Quality Info` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_ff2e68f94b84414db496db095a6e9573 = L.marker(
+        var marker_4b0341f892934f0bba3a860300d9e117 = L.marker(
             [51.507538, -0.012823],
             {
                 icon: new L.Icon.Default()
                 }
-            ).addTo(map_31f84b46c8454eee842efddf529cc598);
+            ).addTo(map_0c606cc3869c44ef9f075e5cc891252b);
         
     
-            var popup_5f5b7f5aa2ac4c5bb130551eb23314c3 = L.popup({maxWidth: '300'
+            var popup_58ba2213d5934c59b448a1f2eefd2540 = L.popup({maxWidth: '300'
             
             });
 
             
-                var html_5fd76ef4689544938e40f50b8fe6827a = $(`<div id="html_5fd76ef4689544938e40f50b8fe6827a" style="width: 100.0%; height: 100.0%;"><strong>Blackwall DLR</strong></div>`)[0];
-                popup_5f5b7f5aa2ac4c5bb130551eb23314c3.setContent(html_5fd76ef4689544938e40f50b8fe6827a);
+                var html_15bbf9aa702f4b20ad49d040f42611a1 = $(`<div id="html_15bbf9aa702f4b20ad49d040f42611a1" style="width: 100.0%; height: 100.0%;"><strong>Blackwall DLR</strong></div>`)[0];
+                popup_58ba2213d5934c59b448a1f2eefd2540.setContent(html_15bbf9aa702f4b20ad49d040f42611a1);
             
 
-            marker_ff2e68f94b84414db496db095a6e9573.bindPopup(popup_5f5b7f5aa2ac4c5bb130551eb23314c3)
+            marker_4b0341f892934f0bba3a860300d9e117.bindPopup(popup_58ba2213d5934c59b448a1f2eefd2540)
             ;
 
             
         
     
-        marker_ff2e68f94b84414db496db095a6e9573.bindTooltip(
+        marker_4b0341f892934f0bba3a860300d9e117.bindTooltip(
             `<div>`
             + `Click For Air Quality Info` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_c691070473e947fbb8802cf732674419 = L.marker(
+        var marker_2938a63aa5f145bab8fd2ce02205cea2 = L.marker(
             [51.5158, -0.01433],
             {
                 icon: new L.Icon.Default()
                 }
-            ).addTo(map_31f84b46c8454eee842efddf529cc598);
+            ).addTo(map_0c606cc3869c44ef9f075e5cc891252b);
         
     
-            var popup_f0ad676f26144ccda67d1c9ad3abeb46 = L.popup({maxWidth: '300'
+            var popup_7c92c6b461f4453a9acdd62ca53ff021 = L.popup({maxWidth: '300'
             
             });
 
             
-                var html_a6fbdaa491c94b239eece829f18a8f47 = $(`<div id="html_a6fbdaa491c94b239eece829f18a8f47" style="width: 100.0%; height: 100.0%;"><strong>Langdon Park</strong></div>`)[0];
-                popup_f0ad676f26144ccda67d1c9ad3abeb46.setContent(html_a6fbdaa491c94b239eece829f18a8f47);
+                var html_99e4e0c6be114f969ab1c4467fdfbe4e = $(`<div id="html_99e4e0c6be114f969ab1c4467fdfbe4e" style="width: 100.0%; height: 100.0%;"><strong>Langdon Park</strong></div>`)[0];
+                popup_7c92c6b461f4453a9acdd62ca53ff021.setContent(html_99e4e0c6be114f969ab1c4467fdfbe4e);
             
 
-            marker_c691070473e947fbb8802cf732674419.bindPopup(popup_f0ad676f26144ccda67d1c9ad3abeb46)
+            marker_2938a63aa5f145bab8fd2ce02205cea2.bindPopup(popup_7c92c6b461f4453a9acdd62ca53ff021)
             ;
 
             
         
     
-        marker_c691070473e947fbb8802cf732674419.bindTooltip(
+        marker_2938a63aa5f145bab8fd2ce02205cea2.bindTooltip(
             `<div>`
             + `Click For Air Quality Info` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_a10bc7ad0db645c1a7d9e72530f1e8b5 = L.marker(
+        var marker_635a79cf184e44a9858d352b6a4afef7 = L.marker(
             [51.507538, -0.012823],
             {
                 icon: new L.Icon.Default()
                 }
-            ).addTo(map_31f84b46c8454eee842efddf529cc598);
+            ).addTo(map_0c606cc3869c44ef9f075e5cc891252b);
         
     
 
-                var icon_51daa102e64f42bc9c0041d84e572da0 = L.AwesomeMarkers.icon({
+                var icon_c90c459385014e04a49074a55602de5f = L.AwesomeMarkers.icon({
                     icon: 'bus',
                     iconColor: 'white',
                     markerColor: 'green',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_a10bc7ad0db645c1a7d9e72530f1e8b5.setIcon(icon_51daa102e64f42bc9c0041d84e572da0);
+                marker_635a79cf184e44a9858d352b6a4afef7.setIcon(icon_c90c459385014e04a49074a55602de5f);
             
     
-            var popup_68b2484050f74d04b8d53aaff6df811d = L.popup({maxWidth: '300'
+            var popup_b1fd16e42a2f4a359571fa8dafffb04a = L.popup({maxWidth: '300'
             
             });
 
             
-                var html_50b72e28650a496dbf1e830855b8d205 = $(`<div id="html_50b72e28650a496dbf1e830855b8d205" style="width: 100.0%; height: 100.0%;"><strong>Poplar DLR</strong></div>`)[0];
-                popup_68b2484050f74d04b8d53aaff6df811d.setContent(html_50b72e28650a496dbf1e830855b8d205);
+                var html_11eaebd01f2b48b89030277ce1ba63fe = $(`<div id="html_11eaebd01f2b48b89030277ce1ba63fe" style="width: 100.0%; height: 100.0%;"><strong>Poplar DLR</strong></div>`)[0];
+                popup_b1fd16e42a2f4a359571fa8dafffb04a.setContent(html_11eaebd01f2b48b89030277ce1ba63fe);
             
 
-            marker_a10bc7ad0db645c1a7d9e72530f1e8b5.bindPopup(popup_68b2484050f74d04b8d53aaff6df811d)
+            marker_635a79cf184e44a9858d352b6a4afef7.bindPopup(popup_b1fd16e42a2f4a359571fa8dafffb04a)
             ;
 
             
         
     
-        marker_a10bc7ad0db645c1a7d9e72530f1e8b5.bindTooltip(
+        marker_635a79cf184e44a9858d352b6a4afef7.bindTooltip(
             `<div>`
             + `Click For Air Quality Info` + `</div>`,
             {"sticky": true}
@@ -498,7 +521,7 @@ L.control.scale().addTo(map_31f84b46c8454eee842efddf529cc598);
         
     
 
-            var circle_f16786d1a951410dacdfc4acd0b5d4e2 = L.circle(
+            var circle_025ace67a48242f7b78748a2bee127ea = L.circle(
                 [51.525211, -0.033503],
                 {
   "bubblingMouseEvents": true,
@@ -517,49 +540,49 @@ L.control.scale().addTo(map_31f84b46c8454eee842efddf529cc598);
   "weight": 3
 }
                 )
-                .addTo(map_31f84b46c8454eee842efddf529cc598);
+                .addTo(map_0c606cc3869c44ef9f075e5cc891252b);
             
     
-            var popup_c1c4313309c74405a76e039657eef4e9 = L.popup({maxWidth: '300'
+            var popup_eace4f1299a04105a05d8ac0b10c04bf = L.popup({maxWidth: '300'
             
             });
 
             
-                var html_a5f68abd83c14df68fc69d9ece47db79 = $(`<div id="html_a5f68abd83c14df68fc69d9ece47db79" style="width: 100.0%; height: 100.0%;"> FRI </div>`)[0];
-                popup_c1c4313309c74405a76e039657eef4e9.setContent(html_a5f68abd83c14df68fc69d9ece47db79);
+                var html_013f1d5c23474316942b25e70ce91b19 = $(`<div id="html_013f1d5c23474316942b25e70ce91b19" style="width: 100.0%; height: 100.0%;"> FRI </div>`)[0];
+                popup_eace4f1299a04105a05d8ac0b10c04bf.setContent(html_013f1d5c23474316942b25e70ce91b19);
             
 
-            circle_f16786d1a951410dacdfc4acd0b5d4e2.bindPopup(popup_c1c4313309c74405a76e039657eef4e9)
+            circle_025ace67a48242f7b78748a2bee127ea.bindPopup(popup_eace4f1299a04105a05d8ac0b10c04bf)
             ;
 
             
         
     
-        var marker_3aa5278233284afeb2c1a73166a01172 = L.marker(
+        var marker_d4885fdab9ac41ae893f4682f83b42fd = L.marker(
             [51.525211, -0.033503],
             {
                 icon: new L.Icon.Default()
                 }
-            ).addTo(map_31f84b46c8454eee842efddf529cc598);
+            ).addTo(map_0c606cc3869c44ef9f075e5cc891252b);
         
     function vega_parse(spec, div) {
             vg.parse.spec(spec, function(chart) { chart({el:div}).update(); });}
     
-            var popup_7b75bfcd7a4b48778797fc92c2582fd1 = L.popup({maxWidth: '650'
+            var popup_e55ce3760c2d49c185583ff74f684c68 = L.popup({maxWidth: '650'
             
             });
 
             
-                var vega_749d0839e3a6463fb031b747659510d0 = $(`             <div id="vega_749d0839e3a6463fb031b747659510d0"></div>             `)[0];
-                popup_7b75bfcd7a4b48778797fc92c2582fd1.setContent(vega_749d0839e3a6463fb031b747659510d0);
+                var vega_a366461e4c704bc797f53592c92c5931 = $(`             <div id="vega_a366461e4c704bc797f53592c92c5931"></div>             `)[0];
+                popup_e55ce3760c2d49c185583ff74f684c68.setContent(vega_a366461e4c704bc797f53592c92c5931);
             
 
-            marker_3aa5278233284afeb2c1a73166a01172.bindPopup(popup_7b75bfcd7a4b48778797fc92c2582fd1)
+            marker_d4885fdab9ac41ae893f4682f83b42fd.bindPopup(popup_e55ce3760c2d49c185583ff74f684c68)
             ;
 
             
                 
-            vega_parse({"axes": [{"scale": "x", "title": "Days", "type": "x"}, {"scale": "y", "title": "Concentrations", "type": "y"}], "data": [{"name": "table", "values": [{"col": "Concentration", "idx": 0, "val": 5.5}, {"col": "Concentration", "idx": 1, "val": 11.5}, {"col": "Concentration", "idx": 2, "val": 20.5}, {"col": "Concentration", "idx": 3, "val": 35.0}, {"col": "Concentration", "idx": 4, "val": 39.0}, {"col": "Concentration", "idx": 5, "val": 54.0}, {"col": "Concentration", "idx": 6, "val": 57.5}, {"col": "Concentration", "idx": 7, "val": 59.0}, {"col": "Concentration", "idx": 8, "val": 69.5}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 300, "legends": [], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 600},vega_749d0839e3a6463fb031b747659510d0);
+            vega_parse({"axes": [{"scale": "x", "title": "Days", "type": "x"}, {"scale": "y", "title": "Concentrations", "type": "y"}], "data": [{"name": "table", "values": [{"col": "Concentration", "idx": 0, "val": 5.5}, {"col": "Concentration", "idx": 1, "val": 11.5}, {"col": "Concentration", "idx": 2, "val": 20.5}, {"col": "Concentration", "idx": 3, "val": 35.0}, {"col": "Concentration", "idx": 4, "val": 39.0}, {"col": "Concentration", "idx": 5, "val": 54.0}, {"col": "Concentration", "idx": 6, "val": 57.5}, {"col": "Concentration", "idx": 7, "val": 59.0}, {"col": "Concentration", "idx": 8, "val": 69.5}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 300, "legends": [], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 600},vega_a366461e4c704bc797f53592c92c5931);
             
             
         

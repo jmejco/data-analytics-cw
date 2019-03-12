@@ -177,12 +177,12 @@ template = """
 </style>
 {% endmacro %}"""
 
-macro = MacroElement()
-macro._template = Template(template)
+# macro = MacroElement()
+# macro._template = Template(template)
 
-m.get_root().add_child(macro)
+# m.get_root().add_child(macro)
 
-m
+# m
 #End of adding legend
 
 #Adding graph
@@ -206,5 +206,5 @@ folium.Marker([51.525211, -0.033503], popup=popup).add_to(m)
 
 
 m.save('map.html') #Render map
-print 'Map rendering completed'
+print ('Map rendering completed')
 

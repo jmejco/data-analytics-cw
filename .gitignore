@@ -1,3 +1,5 @@
 .env
 .vscode
 *.html
+.DS_Store
+.ipynb_checkpoints
